@@ -19,7 +19,7 @@ describe("sorter", () => {
     ]);
   });
 
-  it("should sort descending with index when given callback is sortAscending", () => {
+  it("should sort descending with index when given callback is sortDescending", () => {
     expect(sorter(names, sortDescending)).toEqual([
       "1. Nyoman",
       "2. Ketut",
