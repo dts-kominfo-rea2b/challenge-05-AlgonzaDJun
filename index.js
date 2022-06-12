@@ -6,9 +6,9 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // "1. Nama"
 // "2. Nama"
 // ...
-let arr = [];
 
 const sorter = (nama, callback) => {
+  let arr = [];
   let result = callback(nama);
 
   for (let [index, val] of result.entries()) {
@@ -21,24 +21,32 @@ const sorter = (nama, callback) => {
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
 // mengembalikan array yang sudah diurutkan
 const sortAscending = (array) => {
+  let arr = [];
   array.sort((a, b) => {
     if (a.toLowerCase() < b.toLowerCase()) return -1;
     if (a.toLowerCase() > b.toLowerCase()) return 1;
-    return 0;
+    // return 0;
   });
 
-  return array;
+  for (const iterator of array) {
+    arr.push(iterator);
+  }
+
+  return arr;
 };
 
 // TODO: Fungsi untuk mengurutkan array of string secara descending
 // mengembalikan array yang sudah diurutkan
 const sortDescending = (array) => {
+  let arr = [];
   array.sort((a, b) => {
     if (a.toLowerCase() < b.toLowerCase()) return 1;
     if (a.toLowerCase() > b.toLowerCase()) return -1;
-    return 0;
+    // return 0;
   });
-
+  for (const iterator of array) {
+    arr.push(iterator);
+  }
   return array;
 };
 
